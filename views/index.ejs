@@ -1,0 +1,27 @@
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+<!--The index will have a dramatic splash with user preferences
+of the sounds and images displayed.  Will use the condition -->
+<% if (currentUser) { %>
+  <h2> Hello, <%= currentUser.firstName %>, you are immersed in the Hans Zimmer fan page! </h2>
+<% } %>
+  <!---Display music, videos, and images a fluid format-->
+<% if (currentUser) { %>
+
+
+  <p>
+    Account created on
+    <%= currentUser.createdAt %>?
+  </p>
+
+<% } else { %>
+
+  <p>
+    You should <a href="/signup">sign up TODAY</a>!
+  </p>
+
+<% } %>
+
+
+
+<a href="/login">Login to the site</a>
