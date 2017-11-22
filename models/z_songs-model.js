@@ -17,7 +17,7 @@ const songSchema = new Schema(
 
       soundtrack_Number:{type:Number},
       songLength:{type:Number},//Display the song length in seconds
-      songPlayurl:{type: String},
+      songPlayUrl:{type: String},
       songImageUrl:{type:String},
       songVideoUrl:{type:String}
 }, {timestamp:true});

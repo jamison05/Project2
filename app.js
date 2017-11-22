@@ -61,6 +61,11 @@ app.use('/', index);
 const userHandling = require('./routes/user-signing-routes');
 app.use('/', userHandling);
 
+
+const songHandling = require('./routes/song-crudop-routes');
+app.use('/', userHandling);
+
+
 //---------------------------------------------------------------------------------
 
 

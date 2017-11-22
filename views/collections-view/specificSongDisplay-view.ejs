@@ -1,0 +1,32 @@
+<form method="post" action="/collections/<%id%>">
+  <label for="song-name-input"> Product Name </label>
+  <input  id="song-name-input" type="text" placeholder="e.g. Nintendo Switch"
+      name="songDetails.songNamedisplay" />
+  <br />
+
+  <label for="soundtrack_Number"> Product Price </label>
+  <input  id="song-year-input" type="number" step="0.10"
+      placeholder="" name="songDetails.songYear" />
+  <br />
+
+  <label for="songtrack_Number"> Image URL </label>
+<input  id="product-track-input" type="text"
+      placeholder="" name="songDetails.songTrack" />
+  <br />
+
+  <label   for="song-playurl-input"> Description </label>
+  <textarea id="song-playUrl-input" placeholder=""
+      name="songDetails.songPlayUrl"></textarea>
+  <br />
+
+  <label   for="song-imgageurl-input"> Description </label>
+  <textarea id="song-imageUrl-input" placeholder=""
+      name="songDetails.songImageUrl"></textarea>
+  <br />
+
+  <label   for="song-Videourl-input"> Description </label>
+  <textarea id="song-VideoUrl-input" placeholder=""
+      name="songDetails.songVideoUrl">
+  <br />
+  <button> Save This Product </button>
+</form>

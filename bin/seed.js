@@ -7,4 +7,4 @@ const songModel = require("../models/z_songs-model");
 const movieModel = require("../models/movie-model");
 
 
-const zimmeer_compinfo =[];
+const zimmer_compinfo =[];

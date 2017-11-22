@@ -1,0 +1,35 @@
+<h2> Hans Zimmer fan list </h2>
+
+<!--<a href="/products/new"> Add a New Product </a>-->
+
+<ul>
+  <% listOfSongs.forEach((oneSong) => { %>
+    <li>
+      <h3> <%= oneSong.name %> </h3>
+      <p> $<%= oneSong.songPlayurl %> </p>
+      <p> $<%= oneSong.songImageurl %> </p>
+      <img src="<%= oneSong.songImageurl %>" />
+      <ul>
+        <li>
+          <!-- <a href="/collections-view/details?prodId=<%= oneSong._id %>"> -->
+
+          <a href="/collections-view/<%= oneSong._id %>">
+            View Details
+          </a>
+        </li>
+
+        <li>
+          <a href="/collections-view/<%= oneSong._id %>/edit">
+            Edit
+          </a>
+        </li>
+
+        <li>
+          <a href="/collections-view/<%= oneSong._id %>/delete">
+            Delete (GET)
+          </a>
+        </li>
+      </ul>
+    </li>
+  <% }) %>
+</ul>

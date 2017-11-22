@@ -55,7 +55,7 @@ router.post("/process-signup", (req, res, next) => {
         //Or in other words initiate a random Seed to create a hash code
           const salt = bcrypt.genSaltSync(3);
           const scrambledPassword =  //    |
-            bcrypt.hashSync(req.body.signupPassword, salt);
+          bcrypt.hashSync(req.body.signupPassword, salt);
 
           const theUser = new UserModel({
               firstName: req.body.signupFirstname,
