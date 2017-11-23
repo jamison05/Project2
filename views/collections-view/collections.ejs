@@ -1,7 +1,9 @@
 <h2> Hans Zimmer fan list </h2>
 
 <!--<a href="/products/new"> Add a New Product </a>-->
-
+<% if (currentUser) { %>
+  <h2> Hello, <%= currentUser.firstName %>, Experience you sounds in the Hans Zimmer fan page! </h2>
+<% } %>
 <ul>
   <% listOfSongs.forEach((oneSong) => { %>
     <li>
@@ -11,9 +13,7 @@
       <img src="<%= oneSong.songImageurl %>" />
       <ul>
         <li>
-          <!-- <a href="/collections-view/details?prodId=<%= oneSong._id %>"> -->
-
-          <a href="/collections-view/<%= oneSong._id %>">
+            <a href="/collections-view/<%= oneSong._id %>">
             View Details
           </a>
         </li>

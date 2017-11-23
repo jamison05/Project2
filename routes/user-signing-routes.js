@@ -11,11 +11,21 @@ const router = express.Router();
 
 // Showing the sign in page.
 
-
-
-router.get("/signUp", (req, res, next) => {
+router.get("/login", (req, res, next) => {
     // redirect to home if you are already logged in
     if (req.user) {
+      console.log("Logged in user page.");
+        res.redirect("/");
+        //The return stops the page from rendering the loginView
+        return;
+      }
+        res.render("login_userpage/loginView");
+});
+
+router.get("/signup", (req, res, next) => {
+    // redirect to home if you are already logged in
+    if (req.user) {
+      console.log("Accessed user page.");
         res.redirect("/");
         //The return stops the page from rendering the loginView
         return;

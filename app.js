@@ -63,7 +63,7 @@ app.use('/', userHandling);
 
 
 const songHandling = require('./routes/song-crudop-routes');
-app.use('/', userHandling);
+app.use('/', songHandling);
 
 
 //---------------------------------------------------------------------------------

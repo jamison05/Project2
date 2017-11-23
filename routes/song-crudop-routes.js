@@ -1,9 +1,9 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const passport = require("passport");
-//const UserModel = require("../models/users-model");
-const songModel = require("../models/z-songs-model");
-const movieModel = require("../models/movie-model");
+const UserModel = require("../models/users-model");
+
+const songModel = require("../models/z_songs-model");
 require('../config/mongoose-setup');
 const router = express.Router();
 
@@ -36,7 +36,7 @@ router.get("/collections", (req, res, next) => {//Gets the html page
           res.locals.listOfSongs = songResults;
 
           //List all of the the songs displayed collections ejs
-          res.render("collections-views/collections-update-view");
+          res.render("collections-views/collections");
       })
       .catch((err) => {
           // render the error page with our error
@@ -46,7 +46,7 @@ router.get("/collections", (req, res, next) => {//Gets the html page
 
 // STEP #1: show the new product form
 router.get("/collections/new", (req, res, next) => {
-    res.render("collections-view/collections-update-view");
+    res.render("collections-view/specificSongDisplay-view");
 }); // GET /products/new
 
 // //Display this page on rendering the home_page.
@@ -98,7 +98,7 @@ router.post("/collections/:id", (req, res, next) => {
       .then(() => {
           // STEP #3: redirect after a SUCCESSFUL save
           // redirect to the product details page
-          res.redirect(`/products/${req.params.prodId}`);
+          res.redirect(`/collections/`);
             // you CAN'T redirect to an EJS file
             // you can ONLY redirect to a URL
       })
@@ -106,10 +106,12 @@ router.post("/collections/:id", (req, res, next) => {
 
         if (err.errors){
             res.locals.validationErrors = err.errors;
-            res.render("review-views/review-form");
+            res.render(`collections/${req.params.id}`);
 
         }
           // render the error page with our error
           next(err);
       });
 });
+
+module.exports = router;
