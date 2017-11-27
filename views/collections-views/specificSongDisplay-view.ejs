@@ -1,0 +1,32 @@
+<form method="post" action="/collections/<%songDetails._id%>">
+  <label for="song-name-input"> Song Name </label>
+  <input  id="song-name-input" type="text"
+      value = "<%=songDetails.songTitle%>"  name="songNamedisplay" />
+  <br />
+
+  <label for="song-year"> Song Year </label>
+  <input  id="song-year-input" type="number" step="0.10"
+   value= "<%=songDetails.songsnippetYear%>" name="songYear" />
+  <br />
+
+  <label for="songtrack_Number"> Song Track </label>
+  <input  id="product-track-input" type="number"
+           value="<%=songDetails.songTrackNumber%>" name="songTrackNumber" />
+  <br />
+
+  <label   for="song-playurl-input"> Song Play Url </label>
+  <textarea id="song-playUrl-input" placeholder="" name = "songPlayUrl"
+    value="<%=songDetails.songPlayUrl%>"></textarea>
+  <br />
+
+  <label   for="song-imgageurl-input"> Song Image Url </label>
+  <textarea id="song-imageUrl-input" placeholder="" name = "songImageUrl"
+    value="<%=songDetails.songImageUrl%>"></textarea>
+  <br />
+
+  <label   for="song-Videourl-input">Song Video Url</label>
+  <textarea id="song-VideoUrl-input" placeholder="" name = "songVideoUrl"
+      value="<%=songDetails.songVideoUrl%>"></textarea>
+  <br />
+  <button> Save This Product </button>
+</form>

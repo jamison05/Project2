@@ -8,8 +8,11 @@ const layouts      = require('express-ejs-layouts');
 const session      = require("express-session");
 const passport     = require("passport");
 //Use the mongoose setuo, runs all of the files inside of that javascript.
-require('./config/mongoose-setup');
-require('./config/passport-setup');
+//It has before npm requires you have to add the .env vsetup
+
+require("dotenv").config();
+//require('./config/mongoose-setup');
+//require('./config/passport-setup');
 
 const app = express();
 

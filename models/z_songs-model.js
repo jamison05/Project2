@@ -15,17 +15,18 @@ const songSchema = new Schema(
         required:[true, "Let us know your name"]
       },
 
-      soundtrack_Number:{type:Number},
+      songTrackNumber:{type:Number},
       songLength:{type:Number},//Display the song length in seconds
       songPlayUrl:{type: String},
       songImageUrl:{type:String},
-      songVideoUrl:{type:String}
+      songVideoUrl:{type:String},
+      dateAdded: { type: Date }
 }, {timestamp:true});
 
 
 
 
-const songModel = mongoose.model("S1ong", songSchema);
+const songModel = mongoose.model("Song", songSchema);
 
 
 module.exports = songModel;

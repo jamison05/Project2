@@ -1,0 +1,36 @@
+<h2> Hans Zimmer fan list </h2>
+
+<% if (currentUser) { %>
+  <h2> Hello, <%= currentUser.firstName %>, Experience you sounds in the Hans Zimmer fan page! </h2>
+  <h2>Select from the following sounds!</h2>
+<% } %>
+
+<ul>
+  <% listOfSongs.forEach((oneSong) => { %>
+    <li1
+      <h3> <%= oneSong.songTitle %> </h3>
+      <p> $<%= oneSong.songPlayUrl %> </p>
+      <p> $<%= oneSong.songImageUrl %> </p>
+      <img src="<%= oneSong.songImageurl %>" />
+      <ul>
+        <li>
+            <a href="/collections/<%= oneSong._id %>/song_details">
+            View Details
+          </a>
+        </li>
+
+        <li>
+          <a href="/collections/<%= oneSong._id %>/edit">
+            Edit
+          </a>
+        </li>
+
+        <li>
+          <a href="/collections/<%= oneSong._id %>/delete">
+            Delete (GET)
+          </a>
+        </li>
+      </ul>
+    </li>
+  <% }) %>
+</ul>
